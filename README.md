@@ -44,9 +44,9 @@ This file provides utility functions for preparing the CIFAR-10 data used in the
 
 ### `real_data/into_lambda.py`
 
-This folder contains the code for the CIFAR-10 diagnostic experiment that illustrates the sensitivity of Storey-BH to the tuning parameter \(\lambda\).
+This folder contains the code for the CIFAR-10 diagnostic experiment that illustrates the sensitivity of Storey-BH to the tuning parameter $\lambda$.
 
-This experiment corresponds to the introductory CIFAR-10 example in **Figure 1** of the paper. It evaluates how the number of rejections and Storey's null-proportion estimate \(\widehat{\pi}_0(\lambda)\) vary with \(\lambda\), both averaged over repeated random splits and in representative single realizations.
+This experiment corresponds to the introductory CIFAR-10 example in **Figure 1** of the paper. It evaluates how the number of rejections and Storey's null-proportion estimate $\widehat{\pi}_0(\lambda)$ vary with $\lambda$, both averaged over repeated random splits and in representative single realizations.
 
 ### `real_data/three_tasks.py`
 
