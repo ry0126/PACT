@@ -8,11 +8,12 @@ This repository contains code for PACT, an adaptive parameter tuning Storey-type
 PACT/
 ├── functions.py
 ├── simu/
-│   ├── fixed_alpha
-│   └── varying_alpha
+│   ├── fixed_alpha.py
+│   └── varying_alpha.py
 └── real_data/
-    ├── into_lambda
-    └── three_tasks
+    ├── cifar_data_prep.py
+    ├── into_lambda.py
+    └── three_tasks.py
 
 ```
 ### `functions.py`
@@ -20,7 +21,7 @@ PACT/
 This file contains the core functions used throughout the experiments.
 
 
-### `simu/fixed_alpha`
+### `simu/fixed_alpha.py`
 
 This folder contains the code for the main synthetic experiments at a fixed target FDR level.
 
@@ -31,23 +32,23 @@ These experiments correspond to **Section 4.1** of the paper. They consider four
 - high-dimensional weak signal;
 - high-dimensional mixture signal.
 
-### `simu/varying_alpha`
+### `simu/varying_alpha.py`
 
 This folder contains the code for additional synthetic experiments with varying target FDR levels, test sample sizes, and null proportions.
 
 These experiments correspond to **Section 4.2** of the paper. They study the finite-sample behavior of greedy tuning and illustrate the role of permutation invariance in PACT.
 
-### `real_data/cifar_data_prep`
+### `real_data/cifar_data_prep.py`
 
 This file provides utility functions for preparing the CIFAR-10 data used in the real-data experiments.
 
-### `real_data/into_lambda`
+### `real_data/into_lambda.py`
 
 This folder contains the code for the CIFAR-10 diagnostic experiment that illustrates the sensitivity of Storey-BH to the tuning parameter \(\lambda\).
 
 This experiment corresponds to the introductory CIFAR-10 example in **Figure 1** of the paper. It evaluates how the number of rejections and Storey's null-proportion estimate \(\widehat{\pi}_0(\lambda)\) vary with \(\lambda\), both averaged over repeated random splits and in representative single realizations.
 
-### `real_data/three_tasks`
+### `real_data/three_tasks.py`
 
 This folder contains the code for the main CIFAR-10 real-data experiments in **Section 5** of the paper.
 
