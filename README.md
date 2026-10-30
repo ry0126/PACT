@@ -16,11 +16,11 @@ PACT splits the reference training sample into auxiliary training and calibratio
 
 The implementation retains the finite-sample correction for discrete conformal p-values:
 
-$$
+```math
 \lambda^+(n)=\frac{\lfloor(n+1)\lambda\rfloor+1}{n+1},
 \qquad
-\widehat{\pi}_0^+(\lambda)=\frac{1+\#\{p_j>\lambda\}}{m\{1-\lambda^+(n)\}}.
-$$
+\widehat{\pi}_0^+(\lambda)=\frac{1+\sum_{j=1}^{m}\mathbf{1}(p_j>\lambda)}{m(1-\lambda^+(n))}.
+```
 
 Here, $n$ is the calibration size of the stage being evaluated. The numerator uses the strict nominal tail $p_j>\lambda$; only the denominator uses $\lambda^+(n)$. The estimate is not clipped at one. The auxiliary and final stages use their own calibration sizes, and the candidate grid must give a positive corrected denominator in both stages.
 
