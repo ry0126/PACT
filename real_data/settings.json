@@ -1,0 +1,92 @@
+{
+  "data_name": "cifar10_resnet18",
+  "pca_dim": 100,
+  "scenarios": [
+    {
+      "sid": "S1",
+      "title": "Land vehicles vs airplanes",
+      "inlier_classes": [
+        1,
+        9
+      ],
+      "outlier_classes": [
+        0
+      ],
+      "n_tr": 8000,
+      "n_cal": 2000,
+      "m": 2000,
+      "pi_out": 0.4
+    },
+    {
+      "sid": "S2",
+      "title": "Land vehicles vs air/sea vehicles",
+      "inlier_classes": [
+        1,
+        9
+      ],
+      "outlier_classes": [
+        0,
+        8
+      ],
+      "n_tr": 8000,
+      "n_cal": 2000,
+      "m": 2000,
+      "pi_out": 0.4
+    },
+    {
+      "sid": "S3",
+      "title": "Land vehicles vs hoofed mammals",
+      "inlier_classes": [
+        1,
+        9
+      ],
+      "outlier_classes": [
+        4,
+        7
+      ],
+      "n_tr": 8000,
+      "n_cal": 2000,
+      "m": 2000,
+      "pi_out": 0.4
+    }
+  ],
+  "METHODS": [
+    "BH",
+    "BKY",
+    "Storey-0.2",
+    "Storey-0.5",
+    "Storey-0.8",
+    "Gao",
+    "PACT"
+  ],
+  "occ": {
+    "model_class": "sklearn.svm._classes.OneClassSVM",
+    "params": {
+      "cache_size": 200,
+      "coef0": 0.0,
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "rbf",
+      "max_iter": -1,
+      "nu": 0.5,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    }
+  },
+  "alpha": 0.1,
+  "random_state": 2026,
+  "candi_lam": [
+    0.1,
+    0.2,
+    0.30000000000000004,
+    0.4,
+    0.5,
+    0.6,
+    0.7000000000000001,
+    0.8,
+    0.9
+  ],
+  "tie_break_ori": "random",
+  "repetitions": 100
+}

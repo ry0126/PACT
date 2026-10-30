@@ -1,0 +1,122 @@
+{
+  "paper_label": "S1",
+  "repetitions": 100,
+  "training_null": 8000,
+  "calibration_null": 2000,
+  "test_samples": 5000,
+  "auxiliary_training": 4000,
+  "auxiliary_calibration": 4000,
+  "extra_auxiliary_samples": 0,
+  "alpha": 0.1,
+  "seed_bases": {
+    "1": 224300000,
+    "100": 224400000
+  },
+  "configs": [
+    {
+      "id": "s3_diverse1d_066",
+      "dim": 1,
+      "components": [
+        {
+          "role": "anchor",
+          "weight": 0.25,
+          "mu": -3.0,
+          "sd": 0.5,
+          "sd_perp": 0.5
+        },
+        {
+          "role": "low_margin",
+          "weight": 0.45,
+          "mu": -2.0,
+          "sd": 0.02,
+          "sd_perp": 0.02
+        },
+        {
+          "role": "high_tail",
+          "weight": 0.3,
+          "mu": 0.5,
+          "sd": 0.015,
+          "sd_perp": 0.015
+        }
+      ],
+      "null_distribution": {
+        "family": "Gaussian",
+        "mean": 0,
+        "covariance": "identity"
+      }
+    },
+    {
+      "id": "s3_d100_0890",
+      "dim": 100,
+      "components": [
+        {
+          "role": "anchor",
+          "weight": 0.25,
+          "mu": 11.5,
+          "sd": 0.5,
+          "sd_perp": 0.35
+        },
+        {
+          "role": "low_margin",
+          "weight": 0.45,
+          "mu": 11.0,
+          "sd": 0.05,
+          "sd_perp": 0.25
+        },
+        {
+          "role": "high_tail",
+          "weight": 0.3,
+          "mu": 9.0,
+          "sd": 0.05,
+          "sd_perp": 0.25
+        }
+      ],
+      "null_distribution": {
+        "family": "Gaussian",
+        "mean": 0,
+        "covariance": "identity"
+      }
+    }
+  ],
+  "model": {
+    "kernel": "rbf",
+    "nu": 0.5,
+    "gamma": "scale",
+    "tol": 0.001
+  },
+  "pi1_values": [
+    0.2,
+    0.4
+  ],
+  "lambda_grid": [
+    0.1,
+    0.2,
+    0.30000000000000004,
+    0.4,
+    0.5,
+    0.6,
+    0.7000000000000001,
+    0.8,
+    0.9
+  ],
+  "sensitivity": {
+    "m_values": [
+      50,
+      500,
+      5000
+    ],
+    "pi1_values": [
+      0.2,
+      0.3,
+      0.4
+    ],
+    "alpha_values": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ]
+  }
+}
